@@ -23,15 +23,11 @@ myApp.controller("phoneBookController", function($scope, $http, Person) {
   };
 
   $scope.findPerson = function(searchName) {
-    Person.find({where: {name: $scope.people[searchName].name}}, function (err, people) { 
+    Person.find({ where: { name: $scope.searchName } }, function(err, people) {
       $scope.people = people;
       console.log(people);
-
-     });
- 
+    });
   };
-
-  
 
   // $scope.editPerson = function(index) {
   //   Person.updateAll({id : $scope.people[index].id}, {name :$scope.name} , {phone :$scope.phone}, function(err, count) {

@@ -1,3 +1,4 @@
+// eslint-disable-next-line function-paren-newline
 'use strict';
 
 module.exports = function(Person) {
